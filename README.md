@@ -1,56 +1,95 @@
-🎬 Baixador de Vídeos do YouTube
-Este projeto é uma aplicação simples desenvolvida com Python, Streamlit e pytube para permitir o download de vídeos do YouTube diretamente no navegador. O usuário fornece a URL de um vídeo e o aplicativo faz o download do arquivo no formato de maior resolução disponível.
+# 🎬 Baixador de Vídeos do YouTube com Streamlit
 
-💻 Tecnologias Utilizadas
-Python: Linguagem de programação utilizada.
-Streamlit: Framework para criar aplicações web interativas.
-pytube: Biblioteca para extrair vídeos do YouTube.
-Git: Controle de versão.
-🚀 Funcionalidades
-Baixar vídeos do YouTube: O usuário pode inserir a URL de um vídeo e o aplicativo baixa o arquivo na maior resolução disponível.
-Exibir informações do vídeo: Exibe o título e o número de visualizações do vídeo.
-Interface interativa: Desenvolvida com Streamlit, uma interface simples e intuitiva.
-📦 Instalação
-1. Clone o repositório:
+Este projeto é uma aplicação simples que utiliza Python, Streamlit e a biblioteca pytube para baixar vídeos do YouTube de maneira fácil e intuitiva. Ao inserir a URL do vídeo, o usuário pode visualizar informações sobre o vídeo e fazer o download diretamente para seu computador.
+
+## Funcionalidades
+
+- **Visualização de Título e Visualizações**: Exibe o título e o número de visualizações do vídeo do YouTube.
+- **Download de Vídeo**: Baixa o vídeo em sua melhor qualidade disponível diretamente para a pasta `downloads`.
+- **Interface Interativa**: A interface é desenvolvida com Streamlit, tornando a interação simples e rápida.
+
+## Tecnologias Usadas
+
+- **Python**: Linguagem de programação usada para o backend.
+- **Streamlit**: Framework para criação de aplicações web interativas.
+- **pytube**: Biblioteca para baixar vídeos do YouTube.
+- **os**: Biblioteca para manipulação do sistema de arquivos.
+- **sys**: Biblioteca para manipulação de argumentos de linha de comando.
+
+## Instalação
+
+1. Clone este repositório para o seu computador:
+   ```bash
+   git clone https://github.com/seu-usuario/baixador-videos-youtube.git
+Navegue até a pasta do projeto:
+
 bash
 Copiar
 Editar
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-2. Navegue até o diretório do projeto:
+cd baixador-videos-youtube
+Crie um ambiente virtual (opcional, mas recomendado):
+
 bash
 Copiar
 Editar
-cd nome-do-repositorio
-3. Instale as dependências:
+python -m venv venv
+Ative o ambiente virtual:
+
+Windows:
+bash
+Copiar
+Editar
+.\venv\Scripts\activate
+Linux/Mac:
+bash
+Copiar
+Editar
+source venv/bin/activate
+Instale as dependências:
+
 bash
 Copiar
 Editar
 pip install -r requirements.txt
-Ou instale as bibliotecas necessárias diretamente:
-
-bash
-Copiar
-Editar
-pip install streamlit pytube
-🏃‍♂️ Executando o Projeto
-Para rodar o projeto localmente, execute o seguinte comando no terminal:
+Para executar a aplicação, use o comando:
 
 bash
 Copiar
 Editar
 streamlit run app.py
-Isso abrirá a aplicação em seu navegador, geralmente em http://localhost:8501.
+Como Usar
+Execute a aplicação com o comando acima.
+Na interface que será aberta em seu navegador, insira a URL do vídeo do YouTube que deseja baixar.
+Clique no botão "Baixar 🎥".
+O título e o número de visualizações do vídeo serão exibidos.
+O vídeo será baixado e salvo na pasta downloads.
+Estrutura do Projeto
+bash
+Copiar
+Editar
+baixador-videos-youtube/
+│
+├── app.py               # Arquivo principal da aplicação Streamlit
+├── downloads/           # Pasta onde os vídeos baixados serão salvos
+├── requirements.txt     # Lista de dependências do projeto
+└── README.md            # Este arquivo
+Dependências
+O projeto depende das seguintes bibliotecas:
 
-💡 Como Usar
-Acesse a interface do Streamlit no navegador.
-Insira a URL do vídeo do YouTube que deseja baixar.
-Clique no botão "Baixar 🎥" para iniciar o download.
-O vídeo será salvo na pasta downloads dentro do diretório do projeto.
-🛠 Contribuição
-Faça um fork deste repositório.
-Crie uma branch para a sua funcionalidade (git checkout -b feature/nova-funcionalidade).
-Faça commit das suas mudanças (git commit -m 'Adiciona nova funcionalidade').
-Envie para o repositório remoto (git push origin feature/nova-funcionalidade).
-Abra um pull request.
-📄 Licença
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+pytube: Para fazer o download de vídeos do YouTube.
+streamlit: Para criar a interface interativa.
+os: Para trabalhar com arquivos e diretórios no sistema.
+sys: Para manipular argumentos e variáveis do sistema.
+Você pode instalar todas as dependências usando o arquivo requirements.txt com o comando:
+
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+Possíveis Melhorias
+Implementar uma barra de progresso durante o download.
+Permitir a escolha da qualidade do vídeo antes de fazer o download.
+Adicionar mais opções, como download de áudio ou playlists.
+Contribuindo
+Sinta-se à vontade para abrir issues ou enviar pull requests para melhorias ou correções. Se você encontrar algum erro ou tiver sugestões de novos recursos, ficaremos felizes em receber sua contribuição.
+
